@@ -1,0 +1,37 @@
+# Búsqueda Binaria
+Lista0 = []  # Lista Vacía
+
+# Llenar la lista con valores del 0 al 1999
+Para i desde 0 hasta 1999:
+    Lista0.append(i)
+
+# Función de Búsqueda Binaria
+Función bB(Lista0, x):
+    Si longitud de Lista0 > 1:
+        n2 = entero(longitud de Lista0 / 2)  # Calcula el índice a la mitad de la lista
+        e = Lista0[n2]  # Asigna el valor en n2 a e
+        Si x < e:
+            Retornar bB(Lista0[:n2], x)  # Búsqueda en la mitad izquierda de la lista
+        Sino, si x > e:
+            Retornar bB(Lista0[n2 + 1:], x)  # Búsqueda en la mitad derecha de la lista
+        Sino, si x == e:
+            Retornar Verdadero  # Se encontró el valor
+    Sino, si longitud de Lista0 == 1:
+        Si Lista0[0] == x:
+            Retornar Verdadero
+        Sino:
+            Retornar Falso
+    Sino:
+        Retornar Falso
+
+# Valor a buscar
+valor_a_buscar = 1543
+
+# Llamar a la función de búsqueda binaria
+resultado = bB(Lista0, valor_a_buscar)
+
+# Imprimir el resultado
+Si resultado:
+    Imprimir "True."
+Sino:
+    Imprimir "False"
